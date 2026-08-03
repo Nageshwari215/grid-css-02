@@ -1,0 +1,167 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+    color:#333;
+}
+
+/* Header */
+
+header{
+    background:#1e3a8a;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    margin-top:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+/* Grid Container */
+
+.grid-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    grid-template-rows:auto auto;
+
+    grid-template-areas:
+    "hero hero about"
+    "projects skills contact"
+    "extra extra extra";
+
+    gap:20px;
+
+    padding:20px;
+}
+
+/* Grid Items */
+
+.grid-container section{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:8px;
+
+    box-shadow:0 2px 5px rgba(0,0,0,.2);
+}
+
+.hero{
+    grid-area:hero;
+}
+
+.about{
+    grid-area:about;
+}
+
+.projects{
+    grid-area:projects;
+}
+
+.skills{
+    grid-area:skills;
+}
+
+.contact{
+    grid-area:contact;
+}
+
+.extra{
+    grid-area:extra;
+}
+
+/* Footer */
+
+footer{
+    background:#1e3a8a;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+/* ======================
+   Tablet
+====================== */
+
+@media (max-width:1024px){
+
+.grid-container{
+
+grid-template-columns:1fr 1fr;
+
+grid-template-areas:
+
+"hero hero"
+
+"about projects"
+
+"skills contact"
+
+"extra extra";
+
+}
+
+}
+
+/* ======================
+   Mobile
+====================== */
+
+@media (max-width:768px){
+
+header{
+padding:15px;
+}
+
+nav{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.grid-container{
+
+grid-template-columns:1fr;
+
+grid-template-areas:
+
+"hero"
+
+"about"
+
+"projects"
+
+"skills"
+
+"contact"
+
+"extra";
+
+}
+
+body{
+font-size:16px;
+}
+
+}
